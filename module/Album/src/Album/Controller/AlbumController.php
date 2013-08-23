@@ -6,8 +6,6 @@ use Zend\View\Model\ViewModel;
 use Album\Model\Album;   
 use Album\Form\AlbumForm;
 
-
-
 class AlbumController extends AbstractActionController
 {
     protected $albumTable;
