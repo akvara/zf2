@@ -1,15 +1,15 @@
 <?php $this->headTitle()->prepend('Contact'); ?>
 <section class="contact">
-<h2>Contact Me</h2>
+<h2><?php echo $this->translate('Contact Me') ?></h2>
 
 <p>
-    Contact me if you have any questions:
+    <?php echo $this->translate('Contact me if you have any questions') ?>:
 </p>
 
 <?php if ($this->error): ?>
 <p class="error">
-    There were one or more isues with your submission. Please correct them as 
-    indicated below.
+    <?php echo $this->translate('There were one or more isues with your submission. Please correct them as 
+    indicated below') ?>.
 </p>
 <?php endif ?>
 
