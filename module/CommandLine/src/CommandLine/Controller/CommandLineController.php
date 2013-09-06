@@ -3,6 +3,7 @@ namespace CommandLine\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Log\Logger;
+use CommandLine\Exception\FileNotFoundException;
 
 class CommandLineController extends AbstractActionController
 {
@@ -10,29 +11,29 @@ class CommandLineController extends AbstractActionController
 
     protected function initLogger() {
         if (!$this->logger) {
-            $this->logger = $this->getServiceLocator()->get('logger');
+            $this->logger = $this->getServiceLocator()->get('Zend\Log');
         }
         return $this;
     }
-    
+
     public function myAction()
     {
-        echo "aš\n";
+        // echo "comm:\n";
         $this->initLogger();
+        $this->logger->info('Pradėjau:');
+        $config = $this->getServiceLocator()->get('config')['commandline'];
 
-        // $config = $this->getServiceLocator()->get('config')['import1c'];
+        $dir = $config['dir_import'];
+        $regex = $config['filter_regex'];
+        $files = array_filter(scandir($config['dir_import'], 1), function ($fileName) use ($dir, $regex) {
+             return (is_file($dir . DIRECTORY_SEPARATOR . $fileName) && preg_match($regex, $fileName));
+        });
+        if (empty($files)) {
+            throw new FileNotFoundException($dir);
+        }
 
-        // $dir = $config['dir_import'];
-        // $regex = $config['filter_regex'];
-        // $files = array_filter(scandir($config['dir_import'], 1), function ($fileName) use ($dir, $regex) {
-        //     return (is_file($dir . DIRECTORY_SEPARATOR . $fileName) && preg_match($regex, $fileName));
-        // });
-        // if (empty($files)) {
-        //     throw new FileNotFoundException($dir);
-        // }
-
-        // $archivePath = $dir . DIRECTORY_SEPARATOR . reset($files);
-        // $this->logger->info('Latest archive with 1C data', [$archivePath]);
+        $archivePath = $dir . DIRECTORY_SEPARATOR . reset($files);
+        $this->logger->info('Failai:', [$archivePath]);
         // $command = sprintf('unzip -o "%s" -d "%s" 2>&1', $archivePath, $config['dir_tmp']);
         // exec($command, $out, $code);
         // if ($code) {
