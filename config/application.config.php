@@ -5,7 +5,7 @@ return array(
         'Application',
         'Album',
         'Contact',
-        'CommandLine',
+//        'CommandLine',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
