@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZF2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-23 15:38+0200\n"
-"PO-Revision-Date: 2013-08-23 15:39+0200\n"
+"POT-Creation-Date: 2013-09-13 15:44+0200\n"
+"PO-Revision-Date: 2013-09-13 15:44+0200\n"
 "Last-Translator: Andrius K. <akvara@gmail.com>\n"
 "Language-Team: Z\n"
 "Language: lt_LT\n"
@@ -15,10 +15,11 @@ msgstr ""
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.7\n"
-"X-Poedit-SearchPath-0: Application\n"
-"X-Poedit-SearchPath-1: Album\n"
-"X-Poedit-SearchPath-2: Contact\n"
-"X-Poedit-SearchPath-3: ../vendor/zendframework/zendframework/library/Zend\n"
+"X-Poedit-SearchPath-0: ../config/autoload\n"
+"X-Poedit-SearchPath-1: Application\n"
+"X-Poedit-SearchPath-2: Album\n"
+"X-Poedit-SearchPath-3: Contact\n"
+"X-Poedit-SearchPath-4: ../vendor/zf-commons\n"
 
 #: Album/src/Album/Controller/AlbumController.php:23
 msgid "Add"
@@ -33,9 +34,8 @@ msgid "Subject:"
 msgstr "Tema:"
 
 #: Contact/src/Contact/Form/ContactForm.php:52
-#, fuzzy
 msgid "Your message:"
-msgstr "Jūsų žinutė išsiųsta"
+msgstr "Jūsų žinutė:"
 
 #: Contact/src/Contact/Form/ContactForm.php:58
 msgid "Please verify you are human."
@@ -45,9 +45,17 @@ msgstr "Parodykite, kad nesate mašina."
 msgid "Send"
 msgstr "Siųsti"
 
-#: ../vendor/zendframework/zendframework/library/Zend/Captcha/Dumb.php:25
-msgid "Please type this word backwards"
-msgstr "Įveskite šį žodį iš kitos pusės"
+#: ../vendor/zf-commons/zfc-user/src/ZfcUser/Form/Base.php:78
+msgid "Submit"
+msgstr "Tinka"
+
+#: ../vendor/zf-commons/zfc-user/src/ZfcUser/Form/Login.php:62
+msgid "Sign In"
+msgstr "Prisijungti"
+
+#: ../vendor/zf-commons/zfc-user/src/ZfcUser/Form/Register.php:36
+msgid "Register"
+msgstr "Registruotis"
 
 #: Application/view/application/index/index.phtml:2
 #, php-format
@@ -165,7 +173,7 @@ msgstr ""
 #: Application/view/error/404.phtml:60 Application/view/error/404.phtml:84
 #: Application/view/error/index.phtml:15 Application/view/error/index.phtml:39
 msgid "Message"
-msgstr ""
+msgstr "Žinutė"
 
 #: Application/view/error/404.phtml:64 Application/view/error/404.phtml:88
 #: Application/view/error/index.phtml:19 Application/view/error/index.phtml:43
@@ -254,3 +262,12 @@ msgstr "Ačiū!"
 #: Contact/view/contact/contact/thank-you.phtml:9
 msgid "Your message has been sent!"
 msgstr "Jūsų žinutė išsiųsta"
+
+#~ msgid "Sandbox"
+#~ msgstr "Smėlio dėžė"
+
+#~ msgid "User"
+#~ msgstr "Prisijungimas"
+
+#~ msgid "Please type this word backwards"
+#~ msgstr "Įveskite šį žodį iš kitos pusės"
