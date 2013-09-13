@@ -20,17 +20,36 @@ return array(
                     ),
                 ),
             ),
-             'contact' => array(
+             'album' => array(
                  'type' => 'Zend\Mvc\Router\Http\Literal',
                  'options' => array(
-                     'route'    => '/contact',
+                     'route'    => '/album',
                      'defaults' => array(
                          'controller' => 'Album\Controller\Album',
                          'action'     => 'index',
                      ),
                  ),
              ),
-            // The following is a route to simplify getting started creating
+            'contact' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/contact',
+                    'defaults' => array(
+                        'controller' => 'Contact\Controller\Contact',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
+            'user' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/user',
+//                    'defaults' => array(
+//                        'controller' => 'Contact\Controller\Contact',
+//                        'action'     => 'index',
+//                    ),
+                ),
+            ),            // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
@@ -67,12 +86,18 @@ return array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
         ),
-        'aliases' => array(
-            'translator' => 'MvcTranslator',
+
+        'factories' => array(
+            'translator' => 'Zend\I18n\Translator\TranslatorServiceFactory',
+            'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
         ),
+
     ),
+
     'translator' => array(
         'locale' => 'lt_LT',
+//        'locale' => 'en_EN',
+
         'translation_file_patterns' => array(
             array(
                 'type'     => 'gettext',
@@ -109,4 +134,5 @@ return array(
             ),
         ),
     ),
+
 );

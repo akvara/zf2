@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <?php echo $this->headTitle('ZF2 '. $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?php echo $this->headTitle('ZF2 '. $this->translate('Sandbox'))->setSeparator(' - ')->setAutoEscape(false) ?>
 
         <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
 
@@ -28,19 +28,20 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Skeleton Application') ?></a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
-                        </ul>
-                        <ul class="nav">
-                            <li class="active"><a href="<?php echo $this->url('contact') ?>"><?php echo $this->translate('Contact') ?></a></li>
-                        </ul>
-                    </div><!--/.nav-collapse -->
+                    <a class="brand" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Sandbox') ?></a>
+                    <?php
+                    echo $this->navigation('navigation')
+                        ->menu()
+                        ->setMinDepth(0)
+                        ->setMaxDepth(0)
+                        ->setUlClass('nav')
+                        ->render();
+                    ?>
                 </div>
             </div>
         </div>
         <div class="container">
+            <?php echo $this->navigation('navigation')->breadcrumbs()->setMinDepth(0);?>
             <?php echo $this->content; ?>
             <hr>
             <footer>

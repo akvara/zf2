@@ -2,23 +2,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZF2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-23 15:38+0200\n"
-"PO-Revision-Date: 2013-08-23 15:39+0200\n"
+"POT-Creation-Date: 2013-09-13 15:04+0200\n"
+"PO-Revision-Date: 2013-09-13 15:06+0200\n"
 "Last-Translator: Andrius K. <akvara@gmail.com>\n"
 "Language-Team: Z\n"
 "Language: lt_LT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate;setMessage;setLabel;"
-"setValue;append;label\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate;setMessage;setLabel;setValue;append;label\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.7\n"
-"X-Poedit-SearchPath-0: Application\n"
-"X-Poedit-SearchPath-1: Album\n"
-"X-Poedit-SearchPath-2: Contact\n"
-"X-Poedit-SearchPath-3: ../vendor/zendframework/zendframework/library/Zend\n"
+"X-Poedit-SearchPath-0: ../config\n"
+"X-Poedit-SearchPath-1: Application\n"
+"X-Poedit-SearchPath-2: Album\n"
+"X-Poedit-SearchPath-3: Contact\n"
+"X-Poedit-SearchPath-4: ../vendor/zf-commons\n"
 
 #: Album/src/Album/Controller/AlbumController.php:23
 msgid "Add"
@@ -33,9 +33,8 @@ msgid "Subject:"
 msgstr "Tema:"
 
 #: Contact/src/Contact/Form/ContactForm.php:52
-#, fuzzy
 msgid "Your message:"
-msgstr "Jūsų žinutė išsiųsta"
+msgstr "Jūsų žinutė:"
 
 #: Contact/src/Contact/Form/ContactForm.php:58
 msgid "Please verify you are human."
@@ -45,9 +44,17 @@ msgstr "Parodykite, kad nesate mašina."
 msgid "Send"
 msgstr "Siųsti"
 
-#: ../vendor/zendframework/zendframework/library/Zend/Captcha/Dumb.php:25
-msgid "Please type this word backwards"
-msgstr "Įveskite šį žodį iš kitos pusės"
+#: ../vendor/zf-commons/zfc-user/src/ZfcUser/Form/Base.php:78
+msgid "Submit"
+msgstr "Tinka"
+
+#: ../vendor/zf-commons/zfc-user/src/ZfcUser/Form/Login.php:62
+msgid "Sign In"
+msgstr "Prisijungti"
+
+#: ../vendor/zf-commons/zfc-user/src/ZfcUser/Form/Register.php:36
+msgid "Register"
+msgstr "Registruotis"
 
 #: Application/view/application/index/index.phtml:2
 #, php-format
@@ -56,11 +63,7 @@ msgstr ""
 
 #: Application/view/application/index/index.phtml:3
 #, php-format
-msgid ""
-"Congratulations! You have successfully installed the %sZF2 Skeleton "
-"Application%s. You are currently running Zend Framework version %s. This "
-"skeleton can serve as a simple starting point for you to begin building your "
-"application on ZF2."
+msgid "Congratulations! You have successfully installed the %sZF2 Skeleton Application%s. You are currently running Zend Framework version %s. This skeleton can serve as a simple starting point for you to begin building your application on ZF2."
 msgstr ""
 
 #: Application/view/application/index/index.phtml:4
@@ -73,12 +76,7 @@ msgstr ""
 
 #: Application/view/application/index/index.phtml:11
 #, php-format
-msgid ""
-"Zend Framework 2 is under active development. If you are interested in "
-"following the development of ZF2, there is a special ZF2 portal on the "
-"official Zend Framework website which provides links to the ZF2 %swiki%s, "
-"%sdev blog%s, %sissue tracker%s, and much more. This is a great resource for "
-"staying up to date with the latest developments!"
+msgid "Zend Framework 2 is under active development. If you are interested in following the development of ZF2, there is a special ZF2 portal on the official Zend Framework website which provides links to the ZF2 %swiki%s, %sdev blog%s, %sissue tracker%s, and much more. This is a great resource for staying up to date with the latest developments!"
 msgstr ""
 
 #: Application/view/application/index/index.phtml:12
@@ -91,11 +89,7 @@ msgstr ""
 
 #: Application/view/application/index/index.phtml:17
 #, php-format
-msgid ""
-"The community is working on developing a community site to serve as a "
-"repository and gallery for ZF2 modules. The project is available %son GitHub"
-"%s. The site is currently live and currently contains a list of some of the "
-"modules already available for ZF2."
+msgid "The community is working on developing a community site to serve as a repository and gallery for ZF2 modules. The project is available %son GitHub%s. The site is currently live and currently contains a list of some of the modules already available for ZF2."
 msgstr ""
 
 #: Application/view/application/index/index.phtml:18
@@ -108,11 +102,7 @@ msgstr ""
 
 #: Application/view/application/index/index.phtml:23
 #, php-format
-msgid ""
-"If you need any help or support while developing with ZF2, you may reach us "
-"via IRC: %s#zftalk on Freenode%s. We'd love to hear any questions or "
-"feedback you may have regarding the beta releases. Alternatively, you may "
-"subscribe and post questions to the %smailing lists%s."
+msgid "If you need any help or support while developing with ZF2, you may reach us via IRC: %s#zftalk on Freenode%s. We'd love to hear any questions or feedback you may have regarding the beta releases. Alternatively, you may subscribe and post questions to the %smailing lists%s."
 msgstr ""
 
 #: Application/view/application/index/index.phtml:24
@@ -128,8 +118,7 @@ msgid "The requested controller was unable to dispatch the request."
 msgstr ""
 
 #: Application/view/error/404.phtml:13
-msgid ""
-"The requested controller could not be mapped to an existing controller class."
+msgid "The requested controller could not be mapped to an existing controller class."
 msgstr ""
 
 #: Application/view/error/404.phtml:16
@@ -186,16 +175,8 @@ msgstr "Įvyko klaida"
 
 #: Application/view/layout/layout.phtml:6
 #: Application/view/layout/layout.phtml:31
-msgid "Skeleton Application"
-msgstr "Pavyzdys"
-
-#: Application/view/layout/layout.phtml:34
-msgid "Home"
-msgstr "Į pradžią"
-
-#: Application/view/layout/layout.phtml:37
-msgid "Contact"
-msgstr "Kontaktai"
+msgid "Sandbox"
+msgstr "Smėlio dėžė"
 
 #: Application/view/layout/layout.phtml:47
 msgid "All rights reserved."
@@ -254,3 +235,18 @@ msgstr "Ačiū!"
 #: Contact/view/contact/contact/thank-you.phtml:9
 msgid "Your message has been sent!"
 msgstr "Jūsų žinutė išsiųsta"
+
+#~ msgid "Skeleton Application"
+#~ msgstr "Pavyzdys"
+
+#~ msgid "Home"
+#~ msgstr "Į pradžią"
+
+#~ msgid "Contact"
+#~ msgstr "Kontaktai"
+
+#~ msgid "User"
+#~ msgstr "Prisijungimas"
+
+#~ msgid "Please type this word backwards"
+#~ msgstr "Įveskite šį žodį iš kitos pusės"
