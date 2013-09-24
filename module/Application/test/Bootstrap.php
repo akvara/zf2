@@ -1,5 +1,6 @@
 <?php
-namespace ApplicationTest;//Change this namespace for your test
+
+namespace ApplicationTest;
 
 use Zend\Loader\AutoloaderFactory;
 use Zend\Mvc\Service\ServiceManagerConfig;

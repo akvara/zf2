@@ -19,8 +19,8 @@ class AlbumTest extends PHPUnit_Framework_TestCase
     {
         $album = new Album();
         $data  = array('artist' => 'some artist',
-                       'id'     => 123,
-                       'title'  => 'some title');
+            'id'     => 123,
+            'title'  => 'some title');
 
         $album->exchangeArray($data);
 
@@ -34,8 +34,8 @@ class AlbumTest extends PHPUnit_Framework_TestCase
         $album = new Album();
 
         $album->exchangeArray(array('artist' => 'some artist',
-                                    'id'     => 123,
-                                    'title'  => 'some title'));
+            'id'     => 123,
+            'title'  => 'some title'));
         $album->exchangeArray(array());
 
         $this->assertNull($album->artist, '"artist" should have defaulted to null');

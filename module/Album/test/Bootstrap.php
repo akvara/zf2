@@ -1,5 +1,6 @@
 <?php
-namespace AlbumTest;//Change this namespace for your test
+
+namespace AlbumTest;
 
 use Zend\Loader\AutoloaderFactory;
 use Zend\Mvc\Service\ServiceManagerConfig;
