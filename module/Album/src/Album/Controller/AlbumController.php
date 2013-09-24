@@ -65,7 +65,6 @@ class AlbumController extends AbstractActionController
                 'action' => 'index'
             ));
         }
-
         $form  = new AlbumForm();
         $form->bind($album);
         $form->get('submit')->setAttribute('value', 'Edit');
@@ -76,6 +75,7 @@ class AlbumController extends AbstractActionController
             $form->setData($request->getPost());
 
             if ($form->isValid()) {
+                var_dump($album);
                 $this->getAlbumTable()->saveAlbum($album);
 
                 // Redirect to list of albums

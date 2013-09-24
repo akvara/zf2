@@ -21,8 +21,7 @@ return array(
     ),
     'service_manager' => array(
         'factories' => array(
-            'Zend\Db\Adapter\Adapter'
-                    => 'Zend\Db\Adapter\AdapterServiceFactory',
+            'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory',
             'Zend\Log' => function ($sm) {
                 $log = new Zend\Log\Logger();
                 $writer = new Zend\Log\Writer\Stream('php://output');

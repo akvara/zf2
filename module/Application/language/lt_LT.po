@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZF2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-13 16:45+0200\n"
-"PO-Revision-Date: 2013-09-13 16:45+0200\n"
+"POT-Creation-Date: 2013-09-18 15:53+0200\n"
+"PO-Revision-Date: 2013-09-18 15:54+0200\n"
 "Last-Translator: Andrius K. <akvara@gmail.com>\n"
 "Language-Team: Z\n"
 "Language: lt_LT\n"
@@ -208,6 +208,22 @@ msgstr "Naujas albumas"
 #: Album/view/album/album/delete.phtml:4
 msgid "Delete album"
 msgstr "Šalinti albumą"
+
+#: Album/view/album/album/delete.phtml:5
+msgid "Are you sure that you want to delete "
+msgstr "Ar tikrai norite pašalinti "
+
+#: Album/view/album/album/delete.phtml:7
+msgid " by "
+msgstr ", sukurtą "
+
+#: Album/view/album/album/delete.phtml:25
+msgid "Yes"
+msgstr "Taip"
+
+#: Album/view/album/album/delete.phtml:26
+msgid "No"
+msgstr "Ne"
 
 #: Album/view/album/album/edit.phtml:4
 msgid "Edit album"

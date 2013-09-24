@@ -7,5 +7,6 @@ nbproject
 .project
 .settings
 composer.*
+data/logs
 vendor/bin
 vendor
