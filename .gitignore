@@ -6,7 +6,8 @@ nbproject
 .idea
 .project
 .settings
-composer.*
+composer.lock
 data/logs
-vendor/bin
 vendor
+*.mo
+

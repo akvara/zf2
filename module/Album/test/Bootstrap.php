@@ -104,4 +104,4 @@ class Bootstrap
 }
 
 Bootstrap::init();
-Bootstrap::chroot();
+//Bootstrap::chroot();
