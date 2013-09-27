@@ -15,7 +15,7 @@ return array(
                 'options' => array(
                     'route'    => '/',
                     'defaults' => array(
-                        'controller' => 'Album\Controller\Album',
+                        'controller' => 'Application\Controller\Index',
                         'action'     => 'index',
                     ),
                 ),
@@ -44,12 +44,13 @@ return array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
                     'route'    => '/user',
-//                    'defaults' => array(
+                    'defaults' => array(
 //                        'controller' => 'Contact\Controller\Contact',
 //                        'action'     => 'index',
-//                    ),
+                    ),
                 ),
-            ),            // The following is a route to simplify getting started creating
+            ),
+            // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
@@ -108,7 +109,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Application\Controller\IndexController',
+            'Album\Controller\Index' => 'Album\Controller\IndexController'
         ),
     ),
     'view_manager' => array(
@@ -139,7 +141,7 @@ return array(
             'Application_driver' => array(
                 'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
                 'cache' => 'array',
-                'paths' => array(__DIR__ . '/../src/Application/Entity')
+                'paths' => array((__DIR__ . '/../src/Application/Entity'))
             ),
             'orm_default' => array(
                 'drivers' => array(

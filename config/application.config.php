@@ -5,11 +5,12 @@ return array(
         'Application',
         'ZfcBase',
         'ZfcUser',
+        'ZendDeveloperTools',
         'DoctrineModule',
         'DoctrineORMModule',
         'Album',
         'Contact',
-        'CommandLine',
+//        'CommandLine',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
