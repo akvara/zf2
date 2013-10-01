@@ -3,14 +3,19 @@ return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
         'Application',
-        'ZfcBase',
-        'ZfcUser',
+
+        // My modules
+        'Album',
+        'Contact',
+//        'ArraySort',
+//        'CommandLine',
+
+        // Vendor modules
         'ZendDeveloperTools',
         'DoctrineModule',
         'DoctrineORMModule',
-        'Album',
-        'Contact',
-//        'CommandLine',
+        'ZfcBase',
+        'ZfcUser',
     ),
 
     // These are various options for the listeners attached to the ModuleManager

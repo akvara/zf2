@@ -4,7 +4,7 @@ ZF2 Sandbox
 
 Tutorial
 ------------
-Branch doctrine: Not Used
+http://marco-pivetta.com/doctrine-orm-zf2-tutorial/#/
 
 
 ToDo
