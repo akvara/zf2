@@ -1,0 +1,17 @@
+<?php
+
+$title = $this->translate('Sort');
+$this->headTitle($title);
+$form = $this->form;
+$form->setAttribute('action',
+    $this->url('sort',
+        array(  'action'     => 'index',
+                'controller' => 'ArraySort'
+    )
+));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo $this->formCollection($form);
+echo $this->form()->closeTag();
+?>

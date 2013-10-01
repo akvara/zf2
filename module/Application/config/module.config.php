@@ -20,12 +20,22 @@ return array(
                     ),
                 ),
             ),
-             'album' => array(
-                 'type' => 'Zend\Mvc\Router\Http\Literal',
-                 'options' => array(
+            'album' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
                      'route'    => '/album',
                      'defaults' => array(
                          'controller' => 'Album\Controller\Album',
+                         'action'     => 'index',
+                     ),
+                ),
+             ),
+            'sort' => array(
+                 'type' => 'Zend\Mvc\Router\Http\Literal',
+                 'options' => array(
+                     'route'    => '/sort',
+                     'defaults' => array(
+                         'controller' => 'ArraySort\Controller\ArraySort',
                          'action'     => 'index',
                      ),
                  ),
@@ -44,12 +54,13 @@ return array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
                     'route'    => '/user',
-//                    'defaults' => array(
-//                        'controller' => 'Contact\Controller\Contact',
-//                        'action'     => 'index',
-//                    ),
+            //                    'defaults' => array(
+            //                        'controller' => 'Contact\Controller\Contact',
+            //                        'action'     => 'index',
+            //                    ),
                 ),
-            ),            // The following is a route to simplify getting started creating
+            ),
+            // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
