@@ -28,7 +28,7 @@ class SoapController extends AbstractActionController
         $service = $this->getServiceLocator()->get('Phone\SoapService');
 
         $result  = $service->inboundCall(
-            'unique', 'call', 200, 'CALL', 'dialplan', date('Y-m-d H:i:s')
+            'unique', 'call', 200, 'CALL', 'dialplan', date(\DateTime::W3C)
         );
 
         var_dump($result);
