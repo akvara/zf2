@@ -31,6 +31,17 @@ return array(
                 return $log;
             },
         ),
-
     ),
+    'doctrine' => [
+        'driver' => [
+            'phone_entity' => [
+                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+                'cache' => 'array',
+                'paths' => [ realpath(__DIR__ . '/../../module/Phone/src/Phone/Entity')]
+            ],
+            'orm_default' => [
+                'drivers' => ['Phone\Entity' => 'phone_entity'],
+            ],
+        ],
+    ],
 );

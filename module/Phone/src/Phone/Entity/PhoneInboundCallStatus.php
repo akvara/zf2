@@ -1,16 +1,16 @@
 <?php
 
-namespace Application\Entity;
+namespace Phone\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * DoctrineUser
+ * PhoneInboundCallStatus
  *
- * @ORM\Table(name="doctrine_user")
+ * @ORM\Table(name="phone_inbound_call_status")
  * @ORM\Entity
  */
-class DoctrineUser
+class PhoneInboundCallStatus
 {
     /**
      * @var integer
@@ -24,9 +24,9 @@ class DoctrineUser
     /**
      * @var string
      *
-     * @ORM\Column(name="fullName", type="string", length=255, nullable=false)
+     * @ORM\Column(name="name", type="string", length=8, nullable=false)
      */
-    private $fullname;
+    private $name;
 
 
 
@@ -41,25 +41,25 @@ class DoctrineUser
     }
 
     /**
-     * Set fullname
+     * Set name
      *
-     * @param string $fullname
-     * @return DoctrineUser
+     * @param string $name
+     * @return PhoneInboundCallStatus
      */
-    public function setFullname($fullname)
+    public function setName($name)
     {
-        $this->fullname = $fullname;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get fullname
+     * Get name
      *
      * @return string 
      */
-    public function getFullname()
+    public function getName()
     {
-        return $this->fullname;
+        return $this->name;
     }
 }

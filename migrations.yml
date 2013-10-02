@@ -1,0 +1,4 @@
+name: ZF2.Sandbox migrations
+migrations_namespace: Migrations
+table_name: application_migration
+migrations_directory: data/migrations
