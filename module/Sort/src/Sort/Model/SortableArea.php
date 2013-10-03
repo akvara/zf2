@@ -6,9 +6,9 @@ use Zend\Form\Annotation;
 
 /**
  * @Annotation\Hydrator("Zend\Stdlib\Hydrator\ObjectProperty")
- * @Annotation\Name("TextArea")
+ * @Annotation\Name("SortableArea")
  */
-class TextArea
+class SortableArea
 {
     /**
 

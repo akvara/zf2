@@ -3,13 +3,13 @@ namespace Sort\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Form\Annotation\AnnotationBuilder;
-use Sort\Model\TextArea;
+use Sort\Model\SortableArea;
 
 class SortController extends AbstractActionController
 {
     public function indexAction()
     {
-        $student    = new TextArea();
+        $student    = new SortableArea();
         $builder    = new AnnotationBuilder();
         $form       = $builder->createForm($student);
 
