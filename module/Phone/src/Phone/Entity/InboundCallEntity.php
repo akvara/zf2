@@ -5,12 +5,12 @@ namespace Phone\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * PhoneInboundCall
+ * InboundCallEntity
  *
  * @ORM\Table(name="phone_inbound_call", indexes={@ORM\Index(name="phone_inbound_call_status_id", columns={"phone_inbound_call_status_id"})})
  * @ORM\Entity
  */
-class PhoneInboundCall
+class InboundCallEntity
 {
     /**
      * @var integer
@@ -19,66 +19,66 @@ class PhoneInboundCall
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="asterisk_unique_id", type="string", length=16, nullable=false)
      */
-    private $asteriskUniqueId;
+    protected $asteriskUniqueId;
 
     /**
      * @var string
      *
      * @ORM\Column(name="asterisk_call_id", type="string", length=64, nullable=false)
      */
-    private $asteriskCallId;
+    protected $asteriskCallId;
 
     /**
      * @var integer
      *
      * @ORM\Column(name="destination_number", type="integer", nullable=false)
      */
-    private $destinationNumber;
+    protected $destinationNumber;
 
     /**
      * @var string
      *
      * @ORM\Column(name="dial_plan", type="string", length=64, nullable=false)
      */
-    private $dialPlan;
+    protected $dialPlan;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="created_at", type="datetime", nullable=false)
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="updated_at", type="datetime", nullable=true)
      */
-    private $updatedAt;
+    protected $updatedAt;
 
     /**
-     * @var \Phone\Entity\PhoneInboundCallStatus
+     * @var \Phone\Entity\InboundCallStatusEntity
      *
-     * @ORM\ManyToOne(targetEntity="Phone\Entity\PhoneInboundCallStatus")
+     * @ORM\ManyToOne(targetEntity="Phone\Entity\InboundCallStatusEntity")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="phone_inbound_call_status_id", referencedColumnName="id")
      * })
      */
-    private $phoneInboundCallStatus;
+    protected $inboundCallStatus;
 
 
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -89,7 +89,7 @@ class PhoneInboundCall
      * Set asteriskUniqueId
      *
      * @param string $asteriskUniqueId
-     * @return PhoneInboundCall
+     * @return InboundCallEntity
      */
     public function setAsteriskUniqueId($asteriskUniqueId)
     {
@@ -101,7 +101,7 @@ class PhoneInboundCall
     /**
      * Get asteriskUniqueId
      *
-     * @return string 
+     * @return string
      */
     public function getAsteriskUniqueId()
     {
@@ -112,7 +112,7 @@ class PhoneInboundCall
      * Set asteriskCallId
      *
      * @param string $asteriskCallId
-     * @return PhoneInboundCall
+     * @return InboundCallEntity
      */
     public function setAsteriskCallId($asteriskCallId)
     {
@@ -124,7 +124,7 @@ class PhoneInboundCall
     /**
      * Get asteriskCallId
      *
-     * @return string 
+     * @return string
      */
     public function getAsteriskCallId()
     {
@@ -135,7 +135,7 @@ class PhoneInboundCall
      * Set destinationNumber
      *
      * @param integer $destinationNumber
-     * @return PhoneInboundCall
+     * @return InboundCallEntity
      */
     public function setDestinationNumber($destinationNumber)
     {
@@ -147,7 +147,7 @@ class PhoneInboundCall
     /**
      * Get destinationNumber
      *
-     * @return integer 
+     * @return integer
      */
     public function getDestinationNumber()
     {
@@ -158,7 +158,7 @@ class PhoneInboundCall
      * Set dialPlan
      *
      * @param string $dialPlan
-     * @return PhoneInboundCall
+     * @return InboundCallEntity
      */
     public function setDialPlan($dialPlan)
     {
@@ -170,7 +170,7 @@ class PhoneInboundCall
     /**
      * Get dialPlan
      *
-     * @return string 
+     * @return string
      */
     public function getDialPlan()
     {
@@ -181,7 +181,7 @@ class PhoneInboundCall
      * Set createdAt
      *
      * @param \DateTime $createdAt
-     * @return PhoneInboundCall
+     * @return InboundCallEntity
      */
     public function setCreatedAt($createdAt)
     {
@@ -193,7 +193,7 @@ class PhoneInboundCall
     /**
      * Get createdAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -204,7 +204,7 @@ class PhoneInboundCall
      * Set updatedAt
      *
      * @param \DateTime $updatedAt
-     * @return PhoneInboundCall
+     * @return InboundCallEntity
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -216,7 +216,7 @@ class PhoneInboundCall
     /**
      * Get updatedAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -226,12 +226,12 @@ class PhoneInboundCall
     /**
      * Set phoneInboundCallStatus
      *
-     * @param \Phone\Entity\PhoneInboundCallStatus $phoneInboundCallStatus
-     * @return PhoneInboundCall
+     * @param \Phone\Entity\InboundCallStatusEntity $phoneInboundCallStatus
+     * @return InboundCallEntity
      */
-    public function setPhoneInboundCallStatus(\Phone\Entity\PhoneInboundCallStatus $phoneInboundCallStatus = null)
+    public function setInboundCallStatus(\Phone\Entity\InboundCallStatusEntity $phoneInboundCallStatus = null)
     {
-        $this->phoneInboundCallStatus = $phoneInboundCallStatus;
+        $this->inboundCallStatus = $phoneInboundCallStatus;
 
         return $this;
     }
@@ -239,10 +239,10 @@ class PhoneInboundCall
     /**
      * Get phoneInboundCallStatus
      *
-     * @return \Phone\Entity\PhoneInboundCallStatus 
+     * @return \Phone\Entity\InboundCallStatusEntity
      */
-    public function getPhoneInboundCallStatus()
+    public function getInboundCallStatus()
     {
-        return $this->phoneInboundCallStatus;
+        return $this->inboundCallStatus;
     }
 }

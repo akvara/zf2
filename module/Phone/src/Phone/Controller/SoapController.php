@@ -2,7 +2,6 @@
 
 namespace Phone\Controller;
 
-use Phone\Service\SoapService;
 use Zend\Http\Response;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Soap\Server as SoapServer;
@@ -25,7 +24,7 @@ class SoapController extends AbstractActionController
 
     public function testAction()
     {
-        $service = $this->getServiceLocator()->get('Phone\SoapService');
+        $service = $this->getServiceLocator()->get('Phone\Service\SoapService');
 
         $result  = $service->inboundCall(
             'unique', 'call', 200, 'CALL', 'dialplan', date(\DateTime::W3C)
@@ -35,17 +34,16 @@ class SoapController extends AbstractActionController
         exit;
     }
 
-
     // Protected methods
 
     protected function handleSoapRequest()
     {
-        $config = $this->getServiceLocator()->get('Config');
+        $config = $this->getServiceLocator()->get('Config')['phoneModule'];
 
-        $soapServer = new SoapServer($this->getWsdlUrl(), $config['phone_soap']['server']['options']);
+        $soapServer = new SoapServer($this->getWsdlUrl(), $config['soap']['options']);
         $soapServer
             ->setReturnResponse(true)
-            ->setObject($this->getServiceLocator()->get('Phone\SoapService'));
+            ->setObject($this->getServiceLocator()->get('Phone\Service\InboundCallService'));
 
         return $soapServer->handle();
     }
@@ -54,7 +52,7 @@ class SoapController extends AbstractActionController
     {
         $autoDiscover = new AutoDiscover();
         $autoDiscover
-            ->setClass(get_class($this->getServiceLocator()->get('Phone\SoapService')))
+            ->setClass(get_class($this->getServiceLocator()->get('Phone\Service\SoapService')))
             ->setUri($this->getSoapUrl())
             ->setServiceName('LEOS.CallCenter.PhoneSoap');
 

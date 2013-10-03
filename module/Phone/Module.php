@@ -1,4 +1,5 @@
 <?php
+
 namespace Phone;
 
 class Module

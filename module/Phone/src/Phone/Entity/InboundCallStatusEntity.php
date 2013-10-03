@@ -5,12 +5,12 @@ namespace Phone\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * PhoneInboundCallStatus
+ * InboundCallStatusEntity
  *
  * @ORM\Table(name="phone_inbound_call_status")
  * @ORM\Entity
  */
-class PhoneInboundCallStatus
+class InboundCallStatusEntity
 {
     /**
      * @var integer
@@ -19,21 +19,21 @@ class PhoneInboundCallStatus
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=8, nullable=false)
      */
-    private $name;
+    protected $name;
 
-
+    // Setters, getters
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -44,7 +44,7 @@ class PhoneInboundCallStatus
      * Set name
      *
      * @param string $name
-     * @return PhoneInboundCallStatus
+     * @return InboundCallStatusEntity
      */
     public function setName($name)
     {
@@ -56,7 +56,7 @@ class PhoneInboundCallStatus
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
