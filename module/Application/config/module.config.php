@@ -35,7 +35,7 @@ return array(
                  'options' => array(
                      'route'    => '/sort',
                      'defaults' => array(
-                         'controller' => 'ArraySort\Controller\ArraySort',
+                         'controller' => 'Sort\Controller\Sort',
                          'action'     => 'index',
                      ),
                  ),

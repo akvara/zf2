@@ -7,7 +7,7 @@ return array(
         // My modules
         'Album',
         'Contact',
-        'ArraySort',
+        'Sort',
         'CommandLine',
 
         // Vendor modules

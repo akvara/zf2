@@ -1,54 +1,62 @@
 <?php
-return array(
-    'navigation' => array(
-        'default' => array(
-            array(
+return [
+    'navigation' => [
+        'default' => [
+            [
                 'label' => 'Albums',
                 'route' => 'album',
-                'pages' => array(
-                    array(
+                'pages' => [
+                    [
                         'label' => 'Add',
                         'route' => 'album',
                         'action' => 'add',
-                    ),
-                    array(
+                    ],
+                    [
                         'label' => 'Edit',
                         'route' => 'album',
                         'action' => 'edit',
-                    ),
-                    array(
+                    ],
+                    [
                         'label' => 'Delete',
                         'route' => 'album',
                         'action' => 'delete',
-                    ),
-                ),
-            ),
-            array(
+                    ],
+                ],
+            ],
+
+            'sort' => [
+                'label' => 'Sort',
+                'route' => 'sort',
+            ],
+
+            'contact' => [
                 'label' => 'Contact',
                 'route' => 'contact',
-            ),
-            'account' => array(
+            ],
+
+            'account' => [
                 'label' => 'Account',
                 'route' => 'zfcuser',
-                'pages' => array(
-                    'home' => array(
+                'pages' => [
+                    'home' => [
                         'label' => 'Dashboard',
                         'route' => 'zfcuser',
-                    ),
-                    'login' => array(
+                    ],
+                    'login' => [
                         'label' => 'Sign In',
                         'route' => 'zfcuser/login',
-                    ),
-                    'logout' => array(
+                    ],
+                    'logout' => [
                         'label' => 'Sign Out',
                         'route' => 'zfcuser/logout',
-                    ),
-                    'register' => array(
+                    ],
+                    'register' => [
                         'label' => 'Register',
                         'route' => 'zfcuser/register',
-                    ),
-                ),
-            ),
-        ),
-    ),
- );
+                    ],
+                ],
+            ],
+        ],
+ 
+    ],
+ ];

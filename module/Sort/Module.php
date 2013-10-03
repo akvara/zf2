@@ -1,5 +1,5 @@
 <?php
-namespace ArraySort;
+namespace Sort;
 
 use Album\Model\Album;
 use Album\Model\AlbumTable;

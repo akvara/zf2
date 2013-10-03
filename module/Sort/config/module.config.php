@@ -2,7 +2,7 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'ArraySort\Controller\ArraySort' => 'ArraySort\Controller\ArraySortController',
+            'Sort\Controller\Sort' => 'Sort\Controller\SortController',
         ),
     ),
     'router' => array(
@@ -12,7 +12,7 @@ return array(
                 'options' => array(
                     'route'    => '/sort',
                     'defaults' => array(
-                        'controller' => 'ArraySort\Controller\ArraySort',
+                        'controller' => 'Sort\Controller\Sort',
                         'action'     => 'index',
                     ),
                 ),

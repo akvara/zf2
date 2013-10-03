@@ -1,6 +1,6 @@
 <?php
 
-namespace ArraySort\Model;
+namespace Sort\Model;
 
 use Zend\Form\Annotation;
 
