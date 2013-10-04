@@ -10,6 +10,8 @@ use Zend\Form\Element\Submit;
 /**
  * @Annotation\Hydrator("Zend\Stdlib\Hydrator\ObjectProperty")
  * @Annotation\Name("SortableArea")
+ * @Annotation\Attributes({"width": 100})
+
  */
 class SortableArea
 {
@@ -19,6 +21,8 @@ class SortableArea
      * @Annotation\Type("TextArea")
      * @Annotation\Required({"required":"true" })
      * @Annotation\Filter({"name":"StripTags"})
+     * @Annotation\Attributes({"rows":"5"})
+     * @Annotation\Attributes({"cols":"5"})
      * @Annotation\Options({"label":" "})
      */
     public $sortableText;
@@ -26,12 +30,16 @@ class SortableArea
     /**
      * @Annotation\Type("Text")
      * @Annotation\Options({"label":" "})
-         */
+//     * @Annotation\Attributes({"width": 100})
+     * @Annotation\Attributes({"disabled":"disabled"})
+     */
     public $sortableTextDiff;
 
     /**
      * @Annotation\Type("TextArea")
+     * @Annotation\AllowEmpty
      * @Annotation\Filter({"name":"StripTags"})
+     * @Annotation\Attributes({"rows":"5"})
      * @Annotation\Options({"label":" "})
      */
     public $comparableText;
@@ -45,14 +53,13 @@ class SortableArea
     /**
      * @Annotation\Type("Text")
      * @Annotation\Options({"label":" "})
+     * @Annotation\Attributes({"disabled":"disabled"})
      */
     public $comparableTextDiff;
 
-
-
     /**
      * @Annotation\Type("Submit")
-     * @Annotation\Attributes({"value":"Compare"})
+     * @Annotation\Attributes({"value":"Sort / Compare"})
      */
     public $compare;
 }
