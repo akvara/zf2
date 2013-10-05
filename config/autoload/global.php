@@ -46,6 +46,10 @@ return array(
                 return $log;
             },
         ),
-
     ),
+    'doctrine' => [
+        'driver' => [
+
+        ],
+    ],
 );

@@ -7,13 +7,15 @@ return array(
         // My modules
         'Album',
         'Contact',
+
+//        'Phone',
         'Sort',
-        'CommandLine',
+//        'CommandLine',
 
         // Vendor modules
         'ZendDeveloperTools',
-//        'DoctrineModule',
-//        'DoctrineORMModule',
+        'DoctrineModule',
+        'DoctrineORMModule',
         'ZfcBase',
         'ZfcUser',
     ),

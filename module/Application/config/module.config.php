@@ -15,7 +15,7 @@ return array(
                 'options' => array(
                     'route'    => '/',
                     'defaults' => array(
-                        'controller' => 'Album\Controller\Album',
+                        'controller' => 'Application\Controller\Index',
                         'action'     => 'index',
                     ),
                 ),
@@ -50,14 +50,24 @@ return array(
                     ),
                 ),
             ),
+            'sort' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/sort',
+                    'defaults' => array(
+                        'controller' => 'Sort\Controller\Sort',
+                        'action'     => 'sort',
+                    ),
+                ),
+            ),
             'user' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
                     'route'    => '/user',
-            //                    'defaults' => array(
-            //                        'controller' => 'Contact\Controller\Contact',
-            //                        'action'     => 'index',
-            //                    ),
+                    'defaults' => array(
+//                        'controller' => 'Contact\Controller\Contact',
+//                        'action'     => 'index',
+                    ),
                 ),
             ),
             // The following is a route to simplify getting started creating
@@ -119,7 +129,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Application\Controller\IndexController',
+            'Album\Controller\Index' => 'Album\Controller\IndexController'
         ),
     ),
     'view_manager' => array(
@@ -145,5 +156,4 @@ return array(
             ),
         ),
     ),
-
 );

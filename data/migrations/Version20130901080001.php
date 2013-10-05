@@ -5,7 +5,7 @@ namespace Migrations;
 use Doctrine\DBAL\Migrations\AbstractMigration,
     Doctrine\DBAL\Schema\Schema;
 
-class Version20131001160000 extends AbstractMigration
+class Version20130901080001 extends AbstractMigration
 {
 
     public function up(Schema $schema)
@@ -24,21 +24,17 @@ CREATE TABLE user (
   UNIQUE KEY email (email)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-LOCK TABLES user WRITE;
-/*!40000 ALTER TABLE user DISABLE KEYS */;
-
 INSERT INTO user (user_id, username, email, display_name, password, state, rememberme)
 VALUES
-	(3,'kristina','kristina@zinojimas.lt',NULL,'983affbaaaf6527ccf0d1ba83d21ff88',NULL,NULL),
-	(12,'akvara','akvara@gmail.com',NULL,'d38787337899fba4b7fc3653c81ab844',NULL,NULL);
+	(3,'akvara','kristina@zinojimas.lt',NULL,'983affbaaaf6527ccf0d1ba83d21ff88',NULL,NULL),
+	(12,'Oba','akvara@gmail.com',NULL,'d38787337899fba4b7fc3653c81ab844',NULL,NULL);
 SQL;
         $this->addSql($sql);
     }
 
     public function down(Schema $schema)
     {
-        $this->addSql("DROP TABLE user");
-
+        $schema->dropTable('user');
     }
 
 }
