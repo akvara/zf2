@@ -7,7 +7,7 @@ return array(
         // My modules
         'Album',
         'Contact',
-        'Phone',
+//        'Phone',
         'Sort',
 //        'CommandLine',
 
