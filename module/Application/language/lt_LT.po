@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZF2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-13 15:44+0200\n"
-"PO-Revision-Date: 2013-09-13 15:44+0200\n"
+"POT-Creation-Date: 2013-09-24 22:36+0200\n"
+"PO-Revision-Date: 2013-09-24 22:37+0200\n"
 "Last-Translator: Andrius K. <akvara@gmail.com>\n"
 "Language-Team: Z\n"
 "Language: lt_LT\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPath-3: Contact\n"
 "X-Poedit-SearchPath-4: ../vendor/zf-commons\n"
 
-#: Album/src/Album/Controller/AlbumController.php:23
+#: Album/src/Album/Controller/AlbumController.php:30
 msgid "Add"
 msgstr "Pridėti"
 
@@ -194,18 +194,10 @@ msgstr "Įvyko klaida"
 
 #: Application/view/layout/layout.phtml:6
 #: Application/view/layout/layout.phtml:31
-msgid "Skeleton Application"
-msgstr "Pavyzdys"
+msgid "Sandbox"
+msgstr "Smėlio dėžė"
 
-#: Application/view/layout/layout.phtml:34
-msgid "Home"
-msgstr "Į pradžią"
-
-#: Application/view/layout/layout.phtml:37
-msgid "Contact"
-msgstr "Kontaktai"
-
-#: Application/view/layout/layout.phtml:47
+#: Application/view/layout/layout.phtml:52
 msgid "All rights reserved."
 msgstr "Visos dešinės rezervuotos."
 
@@ -216,6 +208,22 @@ msgstr "Naujas albumas"
 #: Album/view/album/album/delete.phtml:4
 msgid "Delete album"
 msgstr "Šalinti albumą"
+
+#: Album/view/album/album/delete.phtml:5
+msgid "Are you sure that you want to delete "
+msgstr "Ar tikrai norite pašalinti "
+
+#: Album/view/album/album/delete.phtml:7
+msgid " by "
+msgstr ", sukurtą "
+
+#: Album/view/album/album/delete.phtml:25
+msgid "Yes"
+msgstr "Taip"
+
+#: Album/view/album/album/delete.phtml:26
+msgid "No"
+msgstr "Ne"
 
 #: Album/view/album/album/edit.phtml:4
 msgid "Edit album"
@@ -253,7 +261,7 @@ msgstr "Jei turite klausimų - susisiekite su manimi"
 msgid ""
 "There were one or more isues with your submission. Please correct them as \n"
 "    indicated below"
-msgstr "Jūsų žinutėje yra klaidų. Ištaisykite jas"
+msgstr "Yra klaidų. Ištaisykite jas"
 
 #: Contact/view/contact/contact/thank-you.phtml:6
 msgid "Thank you!"
@@ -263,8 +271,14 @@ msgstr "Ačiū!"
 msgid "Your message has been sent!"
 msgstr "Jūsų žinutė išsiųsta"
 
-#~ msgid "Sandbox"
-#~ msgstr "Smėlio dėžė"
+#~ msgid "Skeleton Application"
+#~ msgstr "Pavyzdys"
+
+#~ msgid "Home"
+#~ msgstr "Į pradžią"
+
+#~ msgid "Contact"
+#~ msgstr "Kontaktai"
 
 #~ msgid "User"
 #~ msgstr "Prisijungimas"

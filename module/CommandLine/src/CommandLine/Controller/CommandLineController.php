@@ -1,5 +1,7 @@
 <?php
+
 namespace CommandLine\Controller;
+define('DATE_FORMAT','Y-m-d H:i:s(T)');
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Log\Logger;
@@ -20,7 +22,7 @@ class CommandLineController extends AbstractActionController
     {
         // echo "comm:\n";
         $this->initLogger();
-        $this->logger->info('Pradėjau:');
+        $this->logger->info('Pradėjau: '.date(DATE_FORMAT));
         $config = $this->getServiceLocator()->get('config')['commandline'];
 
         $dir = $config['dir_import'];
@@ -28,12 +30,21 @@ class CommandLineController extends AbstractActionController
         $files = array_filter(scandir($config['dir_import'], 1), function ($fileName) use ($dir, $regex) {
              return (is_file($dir . DIRECTORY_SEPARATOR . $fileName) && preg_match($regex, $fileName));
         });
-        if (empty($files)) {
-            throw new FileNotFoundException($dir);
-        }
+        try {
 
-        $archivePath = $dir . DIRECTORY_SEPARATOR . reset($files);
-        $this->logger->info('Failai:', [$archivePath]);
+            $archivePath = $dir . DIRECTORY_SEPARATOR . reset($files);
+            $this->logger->info('Ieškau failų:', [$archivePath]);
+
+            if (empty($files)) {
+                throw new FileNotFoundException($dir);
+            }
+        } catch (FileNotFoundException $e)
+        {
+            $this->logger->info($e->getMessage());
+//            $missedAttributes[] = $e->getMessage();
+        } // try
+        $this->logger->info('Baigiau: '.date(DATE_FORMAT));
+
         // $command = sprintf('unzip -o "%s" -d "%s" 2>&1', $archivePath, $config['dir_tmp']);
         // exec($command, $out, $code);
         // if ($code) {

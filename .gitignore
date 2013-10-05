@@ -6,7 +6,7 @@ nbproject
 .idea
 .project
 .settings
-/data
-composer.*
-vendor/bin
+composer.lock
+data/logs
 vendor
+

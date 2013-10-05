@@ -1,16 +1,12 @@
 <?php
 return array(
-    'router' => array(
-        'routes' => array(
-            'zfcadmin' => array(
-            ),
-        ),
-    ),
 
     'console' => array(
         'router' => array(
             'routes' => array(
                 'commandline-my' => array(
+                    'type'    => 'segment',
+
                     'options' => array(
                         'route' => 'commandline my',
                         'defaults' => array(

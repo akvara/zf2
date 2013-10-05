@@ -12,8 +12,15 @@ class AlbumController extends AbstractActionController
 
     public function indexAction()
     {
+        // grab the paginator from the AlbumTable
+        $paginator = $this->getAlbumTable()->fetchAll(true);
+        // set the current page to what has been passed in query string, or to 1 if none set
+        $paginator->setCurrentPageNumber((int)$this->params()->fromQuery('page', 1));
+        // set the number of items per page to 10
+        $paginator->setItemCountPerPage(10);
+
         return new ViewModel(array(
-            'albums' => $this->getAlbumTable()->fetchAll(),
+            'paginator' => $paginator
         ));
     }
 
@@ -58,7 +65,6 @@ class AlbumController extends AbstractActionController
                 'action' => 'index'
             ));
         }
-
         $form  = new AlbumForm();
         $form->bind($album);
         $form->get('submit')->setAttribute('value', 'Edit');
@@ -69,6 +75,7 @@ class AlbumController extends AbstractActionController
             $form->setData($request->getPost());
 
             if ($form->isValid()) {
+                var_dump($album);
                 $this->getAlbumTable()->saveAlbum($album);
 
                 // Redirect to list of albums

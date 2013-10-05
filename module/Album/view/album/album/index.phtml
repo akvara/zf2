@@ -15,7 +15,7 @@ $this->headTitle($title);
     <th><?php echo $this->translate('Artist')?></th>
     <th>&nbsp;</th>
 </tr>
-<?php foreach ($albums as $album) : ?>
+    <?php foreach ($this->paginator as $album) : // <-- change here! ?>
 <tr>
     <td><?php echo $this->escapeHtml($album->title);?></td>
     <td><?php echo $this->escapeHtml($album->artist);?></td>
@@ -28,3 +28,17 @@ $this->headTitle($title);
 </tr>
 <?php endforeach; ?>
 </table>
+<?php
+echo $this->paginationControl(
+    // the paginator object
+    $this->paginator,
+    // the scrolling style; see http://zf2.readthedocs.org/en/release-2.1.4/modules/zend.paginator.usage.html#rendering-pages-with-view-scripts
+    'sliding',
+    // the partial to use to render the control
+    array('partial/paginator.phtml', 'Album'),
+    // the route to link to when a user clicks a control link
+    array(
+        'route' => 'album'
+    )
+);
+?>
