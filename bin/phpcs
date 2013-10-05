@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Set colors
+ESC_SEQ="\x1b["
+COL_RESET=$ESC_SEQ"39;49;00m"
+COL_RED=$ESC_SEQ"31;01m"
+COL_GREEN=$ESC_SEQ"32;01m"
+
+# Execute code sniffer
+output=$(php ./vendor/bin/php-cs-fixer fix . --dry-run -vvv)
+
+# Check failed
+if [[ "$output" ]]; then
+    echo -e "${COL_RED}Code Sniffer check failed!${COL_RESET}"
+    echo -e "${COL_RED}${output}${COL_RESET}"
+    exit 1
+fi
+
+# Check passed
+echo -e "${COL_GREEN}Code Sniffer check passed!${COL_RESET}"
+exit 0

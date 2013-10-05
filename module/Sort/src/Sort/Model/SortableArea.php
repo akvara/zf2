@@ -58,6 +58,18 @@ class SortableArea
     public $comparableTextDiff;
 
     /**
+     * @Annotation\Type("Zend\Form\Element\Checkbox")
+     * @Annotation\Options({"label":"Capitalise", "default":"1"})
+     */
+    public $capitalise;
+
+    /**
+     * @Annotation\Type("Zend\Form\Element\Checkbox")
+     * @Annotation\Options({"label":"Remove dupplicates", "value":"1"})
+     */
+    public $de_dupplicate;
+
+    /**
      * @Annotation\Type("Submit")
      * @Annotation\Attributes({"value":"Sort / Compare"})
      */

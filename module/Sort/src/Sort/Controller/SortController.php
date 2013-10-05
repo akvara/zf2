@@ -8,8 +8,11 @@ use Sort\Model\SortableArea;
 class SortController extends AbstractActionController
 {
 
-    private function stringToArray($inputString) {
-        $inputString = strtoupper($inputString);
+    private function stringToArray($inputString, $capitalise) {
+
+        if ($capitalise) {
+            $inputString = strtoupper($inputString);
+        }
         $inputString = str_replace("\n", ' ', $inputString);
         $inputString = str_replace("\r", ' ', $inputString);
         $sortable = explode (' ',  $inputString );
@@ -30,20 +33,18 @@ class SortController extends AbstractActionController
         if ($request->isPost()){
             $form->bind($sortableArea);
             $form->setData($request->getPost());
-//            var_dump($request->getPost());
-//            var_dump($form);
+
             if ($form->isValid()){
 
                 $formData = $form->getData();
 
-                $sortableArrray = $this->stringToArray($formData->sortableText);
-                $comparableArrray = $this->stringToArray($formData->comparableText);
-//                var_dump($formData->comparableArrray);
+                $sortableArrray = $this->stringToArray($formData->sortableText, $formData->capitalise=="1");
+                $comparableArrray = $this->stringToArray($formData->comparableText, $formData->capitalise=="1");
 
                 $sortableTextDiff = implode(' ', array_diff($sortableArrray,$comparableArrray));
                 $comparableTextDiff = implode(' ', array_diff($comparableArrray, $sortableArrray));
-                $sortedText = strtoupper(implode(' ', $sortableArrray));
-                $comparedText = strtoupper(implode(' ', $comparableArrray));
+                $sortedText = implode(' ', $sortableArrray);
+                $comparedText = implode(' ', $comparableArrray);
                 $form->setData(
                     [
                         'sortableText' => $sortedText,
