@@ -8,7 +8,7 @@ return array(
         'Album',
         'Contact',
         'Phone',
-//        'ArraySort',
+        'Sort',
 //        'CommandLine',
 
         // Vendor modules

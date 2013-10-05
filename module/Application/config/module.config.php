@@ -40,6 +40,16 @@ return array(
                     ),
                 ),
             ),
+            'sort' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/sort',
+                    'defaults' => array(
+                        'controller' => 'Sort\Controller\Sort',
+                        'action'     => 'sort',
+                    ),
+                ),
+            ),
             'user' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(

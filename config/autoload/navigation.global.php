@@ -23,9 +23,13 @@ return array(
                     ),
                 ),
             ),
-            array(
+            'contact' =>   array(
                 'label' => 'Contact',
                 'route' => 'contact',
+            ),
+            'sort' =>   array(
+                'label' => 'Sort',
+                'route' => 'sort',
             ),
             'account' => array(
                 'label' => 'Account',
