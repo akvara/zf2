@@ -15,48 +15,8 @@ return [
                 'options' => [
                     'route'    => '/',
                     'defaults' => [
-                        'controller' => 'Application\Controller\Index',
-                        'action'     => 'index',
-                    ],
-                ],
-            ],
-            'album' => [
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => [
-                     'route'    => '/album',
-                     'defaults' => [
-                         'controller' => 'Album\Controller\Album',
-                         'action'     => 'index',
-                     ],
-                ],
-             ],
-            'contact' => [
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => [
-                    'route'    => '/contact',
-                    'defaults' => [
-                        'controller' => 'Contact\Controller\Contact',
-                        'action'     => 'index',
-                    ],
-                ],
-            ],
-            'sort' => [
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => [
-                    'route'    => '/sort',
-                    'defaults' => [
                         'controller' => 'Sort\Controller\Sort',
-                        'action'     => 'sort',
-                    ],
-                ],
-            ],
-            'user' => [
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => [
-                    'route'    => '/user',
-                    'defaults' => [
-//                        'controller' => 'Contact\Controller\Contact',
-//                        'action'     => 'index',
+                        'action'     => 'index',
                     ],
                 ],
             ],
@@ -116,8 +76,6 @@ return [
     ],
     'controllers' => [
         'invokables' => [
-            'Application\Controller\Index' => 'Application\Controller\IndexController',
-            'Album\Controller\Index' => 'Album\Controller\IndexController'
         ],
     ],
     'view_manager' => [

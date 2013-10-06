@@ -5,19 +5,9 @@ return array(
         'Application',
 
         // My modules
-        'Album',
-        'Contact',
-
-//        'Phone',
         'Sort',
-//        'CommandLine',
 
         // Vendor modules
-        'ZendDeveloperTools',
-        'DoctrineModule',
-        'DoctrineORMModule',
-        'ZfcBase',
-        'ZfcUser',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
