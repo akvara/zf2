@@ -3,13 +3,9 @@
     "description": "ZF2 smėlio dėžė",
     "homepage": "http://zf2.local/",
     "require": {
-        "php": "5.4.*",
+        "php": ">=5.4.0",
         "zendframework/zendframework": "2.2.*",
-
-		"zf-commons/zfc-user": "0.1.*",
-		"zf-commons/zfc-base": "0.1.*",
-
-        "doctrine/doctrine-orm-module": "0.7.*",
+        "doctrine/annotations": "dev-master",
         "doctrine/migrations": "dev-master"
     },
     "require-dev": {

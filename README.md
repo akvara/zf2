@@ -3,19 +3,9 @@ ZF2 žaisliukas
 
 Turinys
 ---------
-Meniu konfigūruojamas
-Albums, Contact, Account, Sort, Comandline (pusiau veikiantis)
-Lietuvybė NEveikia
+Tik Sort
 
 
-Mess Detector, CS fixer
-------
-vendor/bin/php-cs-fixer fix . -v
-
-
-ToDo
--------
-* į normalią formą
-* Count
-* į kvaraciejus.org /pi
-
+Instaliavimas
+-------------
+sudo ~/composer.phar install --no-dev -v
