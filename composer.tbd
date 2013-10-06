@@ -1,0 +1,47 @@
+{
+    "name": "LEOS.Callcenter",
+    "description": "Call Center Application",
+    "license": "Private",
+
+    "keywords": [
+        "LEOS",
+        "Callcenter"
+    ],
+
+    "require": {
+        "php": "5.4.*",
+        "phpmd/phpmd": "~1.5.0",
+        "phpunit/phpunit": "3.7.*",
+        "fabpot/php-cs-fixer": "v0.2.0",
+        "behat/behat": "~2.5.0@stable",
+        "mockery/mockery": "dev-master@dev",
+
+        "zendframework/zendframework": "2.2.*",
+        "zendframework/zftool": "dev-master",
+        "zendframework/zend-developer-tools": "dev-master",
+        "zf-commons/zfc-twig": "dev-master",
+        "zf-commons/zfc-user-doctrine-orm": "0.1.1",
+        "nitecon/zfcuser-ldap": "dev-master",
+
+        "doctrine/annotations": "dev-master",
+        "doctrine/doctrine-module": "~0.7",
+        "doctrine/doctrine-orm-module": "~0.7",
+        "doctrine/orm": "2.3.*",
+        "doctrine/migrations": "dev-master",
+        "gedmo/doctrine-extensions": "dev-master",
+        "symfony/yaml": "2.3.4",
+
+        "bjyoungblood/bjy-authorize": "1.4.*",
+        "bjyoungblood/bjy-profiler": "dev-master",
+        "rwoverdijk/assetmanager": "~1.3.4",
+
+        "marcelog/pami": "dev-master"
+    },
+
+    "repositories": [
+        {
+            "type": "pear",
+            "url":  "http://pear.apache.org/log4php/"
+        }
+    ]
+}
