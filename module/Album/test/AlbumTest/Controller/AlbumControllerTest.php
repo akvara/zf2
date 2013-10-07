@@ -5,14 +5,6 @@ namespace AlbumTest\Controller;
 use Test\Bootstrap;
 use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
-//use Album\Controller\AlbumController;
-//use Zend\Http\Request;
-//use Zend\Http\Response;
-//use Zend\Mvc\MvcEvent;
-//use Zend\Mvc\Router\RouteMatch;
-//use Zend\Mvc\Router\Http\TreeRouteStack as HttpRouter;
-//use PHPUnit_Framework_TestCase;
-
 class AlbumControllerTest extends AbstractHttpControllerTestCase
 {
     protected $controller;
@@ -20,6 +12,7 @@ class AlbumControllerTest extends AbstractHttpControllerTestCase
     protected $response;
     protected $routeMatch;
     protected $event;
+    protected $traceError = true;
 
     public function setUp()
     {
@@ -30,6 +23,18 @@ class AlbumControllerTest extends AbstractHttpControllerTestCase
 
     public function testIndexActionCanBeAccessed()
     {
+//        $albumTableMock = $this->getMockBuilder('Album\Model\AlbumTable')
+//            ->disableOriginalConstructor()
+//            ->getMock();
+//
+//        $albumTableMock->expects($this->once())
+//            ->method('fetchAll')
+//            ->will($this->returnValue(array()));
+//
+//        $serviceManager = $this->getApplicationServiceLocator();
+//        $serviceManager->setAllowOverride(true);
+//        $serviceManager->setService('Album\Model\AlbumTable', $albumTableMock);
+
         $this->dispatch('/album');
         $this->assertResponseStatusCode(200);
 
