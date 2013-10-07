@@ -1,15 +1,20 @@
 ZF2 žaisliukas
 =============
 
-Turinys
+Specifika
 ---------
+Album neturi Pagination
+(Pagination pridedamas taip: http://framework.zend.com/manual/2.1/en/tutorials/tutorial.pagination.html)
 
 
 
 Pasiekimai
 ----------
-Tests stopped due to pagination issues
 
+
+Kita
+----
+https://github.com/sebastianbergmann/phpunit/issues/690
 
 ToDo
 -------
