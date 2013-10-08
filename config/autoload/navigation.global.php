@@ -34,6 +34,11 @@ return [
                 'route' => 'contact',
             ],
 
+            'stickynotes' => [
+                'label' => 'StickyNotes',
+                'route' => 'stickynotes',
+            ],
+
             'account' => [
                 'label' => 'Account',
                 'route' => 'zfcuser',
