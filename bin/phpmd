@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Set colors
+ESC_SEQ="\x1b["
+COL_RESET=$ESC_SEQ"39;49;00m"
+COL_RED=$ESC_SEQ"31;01m"
+COL_GREEN=$ESC_SEQ"32;01m"
+
+# Execute Mess Detector on module and config folders
+moduleMd=$(php ./vendor/bin/phpmd module text ./phpmd.xml)
+configMd=$(php ./vendor/bin/phpmd config text ./phpmd.xml)
+
+# Checks failed
+if [[ "$moduleMd" || "$configMd" ]]; then
+    echo -en "${COL_RED}Mess Detector check failed!${COL_RESET}"
+    echo -e "${COL_RED}${moduleMd}${configMd}${COL_RESET}"
+    exit 1
+fi
+
+# All checks passed
+echo -e "${COL_GREEN}Mess Detector check passed!${COL_RESET}"
+exit 0

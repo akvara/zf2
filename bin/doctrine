@@ -1,0 +1,4 @@
+#!/usr/bin/env php
+<?php
+
+include __DIR__ . '/../vendor/doctrine/doctrine-module/bin/doctrine-module.php';
