@@ -67,7 +67,6 @@ return array(
 
     'translator' => array(
         'locale' => 'lt_LT',
-//        'locale' => 'en_EN',
 
         'translation_file_patterns' => array(
             array(
@@ -80,7 +79,9 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
-            'Album\Controller\Index' => 'Album\Controller\IndexController'
+            'Album\Controller\Index' => 'Album\Controller\IndexController',
+            'StickyNotes\Controller\Index' => 'StickyNotes\Controller\StickyNotes',
+
         ),
     ),
     'view_manager' => array(
