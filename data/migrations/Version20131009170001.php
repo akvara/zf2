@@ -20,7 +20,7 @@ CREATE TABLE task_task (
   created_at datetime NOT NULL,
   updated_at datetime DEFAULT NULL,
   auth_user_id int(11) unsigned DEFAULT NULL,
-  task_task_status_id int(11) unsigned NOT NULL,
+  task_task_status_id tinyint(2) unsigned NOT NULL,
 PRIMARY KEY (id),
 
 KEY auth_user_id (auth_user_id),

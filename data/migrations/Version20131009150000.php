@@ -12,7 +12,7 @@ class Version20131009150000 extends AbstractMigration
     {
         $sql = <<<SQL
 CREATE TABLE phone_inbound_call_status (
-  id int (2) NOT NULL,
+  id tinyint (2) unsigned NOT NULL,
   name varchar(8) COLLATE utf8_unicode_ci NOT NULL,
   description varchar(255),
   PRIMARY KEY (id)
@@ -32,7 +32,6 @@ SQL;
     public function down(Schema $schema)
     {
         $this->addSql("DROP TABLE phone_inbound_call_status");
-
     }
 
 }

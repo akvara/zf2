@@ -14,10 +14,10 @@ class Version20131009170000 extends AbstractMigration
     {
         $sql = <<<SQL
 CREATE TABLE task_task_status (
-  id int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
-  description varchar(255) DEFAULT NULL,
-PRIMARY KEY (id)
+  id tinyint (2) unsigned NOT NULL,
+  name varchar(8) COLLATE utf8_unicode_ci NOT NULL,
+  description varchar(255),
+  PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 SQL;
 
