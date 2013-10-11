@@ -1,50 +1,76 @@
 <?php
-return array(
-    'controllers' => array(
-        'invokables' => array(
+return [
+    'controllers' => [
+        'invokables' => [
             'Users\Controller\Index' => 'Users\Controller\IndexController',
             'Users\Controller\Register' => 'Users\Controller\RegisterController',
             'Users\Controller\Login' => 'Users\Controller\LoginController',
 
-        ),
-    ),
-    'router' => array(
-        'routes' => array(
-            'users' => array(
+        ],
+    ],
+    'router' => [
+        'routes' => [
+            'users' => [
                 'type'    => 'Literal',
-                'options' => array(
+                'options' => [
                     'route'    => '/users',
-                    'defaults' => array(
+                    'defaults' => [
                         '__NAMESPACE__' => 'Users\Controller',
                         'controller'    => 'Index',
                         'action'        => 'index',
-                    ),
-                ),
+                    ],
+                ],
                 'may_terminate' => true,
-                'child_routes' => array(
+                'child_routes' => [
                     // This route is a sane default when developing a module;
                     // as you solidify the routes for your module, however,
                     // you may want to remove it and replace it with more
                     // specific routes.
-                    'default' => array(
+                    'default' => [
                         'type'    => 'Segment',
-                        'options' => array(
+                        'options' => [
                             'route'    => '/[:controller[/:action]]',
-                            'constraints' => array(
+                            'constraints' => [
                                 'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
                                 'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
-                            ),
-                            'defaults' => array(
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-        ),
-    ),
-    'view_manager' => array(
-        'template_path_stack' => array(
+                            ],
+                            'defaults' => [
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
+    'view_manager' => [
+        'template_path_stack' => [
             'users' => __DIR__ . '/../view',
-        ),
-    ),
-);
+        ],
+    ],
+    'navigation' => [
+        'default' => [
+            'account' => [
+                'label' => 'Account',
+                'route' => 'zfcuser',
+                'pages' => [
+                    'home' => [
+                        'label' => 'Dashboard',
+                        'route' => 'zfcuser',
+                    ],
+                    'login' => [
+                        'label' => 'Sign In',
+                        'route' => 'zfcuser/login',
+                    ],
+                    'logout' => [
+                        'label' => 'Sign Out',
+                        'route' => 'zfcuser/logout',
+                    ],
+                    'register' => [
+                        'label' => 'Register',
+                        'route' => 'zfcuser/register',
+                    ],
+                ],
+            ],
+        ],
+    ],
+];
