@@ -7,7 +7,6 @@ Album neturi Pagination
 (Pagination pridedamas taip: http://framework.zend.com/manual/2.1/en/tutorials/tutorial.pagination.html)
 
 
-
 Pasiekimai
 ----------
 
