@@ -1,27 +1,35 @@
 <?php
-return array(
-    'controllers' => array(
-        'invokables' => array(
+return [
+    'controllers' => [
+        'invokables' => [
             'Sort\Controller\Sort' => 'Sort\Controller\SortController',
-        ),
-    ),
-    'router' => array(
-        'routes' => array(
-            'sort' => array(
+        ],
+    ],
+    'router' => [
+        'routes' => [
+            'sort' => [
                 'type'    => 'segment',
-                'options' => array(
+                'options' => [
                     'route'    => '/sort',
-                    'defaults' => array(
+                    'defaults' => [
                         'controller' => 'Sort\Controller\Sort',
                         'action'     => 'index',
-                    ),
-                ),
-            ),
-        ),
-    ),
-    'view_manager' => array(
-        'template_path_stack' => array(
+                    ],
+                ],
+            ],
+        ],
+    ],
+    'view_manager' => [
+        'template_path_stack' => [
             'sort' => __DIR__ . '/../view',
-        ),
-    ),
-);
+        ],
+    ],
+    'navigation' => [
+        'default' => [
+            'sort' => [
+                'label' => 'Sort',
+                'route' => 'sort',
+            ],
+        ],
+    ],
+];
