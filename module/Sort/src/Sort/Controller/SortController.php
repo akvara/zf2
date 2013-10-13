@@ -39,10 +39,11 @@ class SortController extends AbstractActionController
                 $formData = $form->getData();
 
                 $sortableArrray = $this->stringToArray($formData->sortableText, $formData->capitalise=="1");
-                $comparableArrray = $this->stringToArray($formData->comparableText, $formData->capitalise=="1");
-
-                $sortableTextDiff = implode(' ', array_diff($sortableArrray,$comparableArrray));
-                $comparableTextDiff = implode(' ', array_diff($comparableArrray, $sortableArrray));
+                if (strlen($formData->comparableText)) {
+                    $comparableArrray = $this->stringToArray($formData->comparableText, $formData->capitalise=="1");
+                    $sortableTextDiff = implode(' ', array_diff($sortableArrray,$comparableArrray));
+                    $comparableTextDiff = implode(' ', array_diff($comparableArrray, $sortableArrray));
+                }
                 $sortedText = implode(' ', $sortableArrray);
                 $comparedText = implode(' ', $comparableArrray);
                 $form->setData(
@@ -51,7 +52,7 @@ class SortController extends AbstractActionController
                         'comparableText' => $comparedText,
                         'sortableTextDiff' => $sortableTextDiff,
                         'comparableTextDiff' => $comparableTextDiff,
-                        'compare'=>"Compare"
+                        'compare'=>"Sort/Compare"
                     ]
                 );
 
