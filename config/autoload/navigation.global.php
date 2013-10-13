@@ -1,8 +1,5 @@
 <?php
 return [
     'navigation' => [
-        'default' => [
-
-        ],
     ],
  ];

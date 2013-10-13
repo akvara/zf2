@@ -280,7 +280,7 @@ msgstr "Jūsų žinutė išsiųsta"
 #~ msgid "Contact"
 #~ msgstr "Kontaktai"
 
-#~ msgid "User"
+#~ msgid "Users"
 #~ msgstr "Prisijungimas"
 
 #~ msgid "Please type this word backwards"

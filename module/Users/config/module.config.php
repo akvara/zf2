@@ -5,7 +5,6 @@ return [
             'Users\Controller\Index' => 'Users\Controller\IndexController',
             'Users\Controller\Register' => 'Users\Controller\RegisterController',
             'Users\Controller\Login' => 'Users\Controller\LoginController',
-
         ],
     ],
     'router' => [
@@ -49,25 +48,25 @@ return [
     ],
     'navigation' => [
         'default' => [
-            'account' => [
-                'label' => 'Account',
-                'route' => 'zfcuser',
+            'users' => [
+                'label' => 'Users',
+                'route' => 'users',
                 'pages' => [
                     'home' => [
                         'label' => 'Dashboard',
-                        'route' => 'zfcuser',
+                        'route' => 'users',
                     ],
                     'login' => [
                         'label' => 'Sign In',
-                        'route' => 'zfcuser/login',
+                        'route' => 'users/login',
                     ],
                     'logout' => [
                         'label' => 'Sign Out',
-                        'route' => 'zfcuser/logout',
+                        'route' => 'users/logout',
                     ],
                     'register' => [
                         'label' => 'Register',
-                        'route' => 'zfcuser/register',
+                        'route' => '/users/register',
                     ],
                 ],
             ],

@@ -1,6 +1,7 @@
 <?php
 namespace Users\Model;
-class User
+
+class Users
 {
     public $id;
     public $name;

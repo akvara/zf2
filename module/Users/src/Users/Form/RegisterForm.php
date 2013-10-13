@@ -9,85 +9,79 @@ class RegisterForm extends Form
         $this->setAttribute('method', 'post');
         $this->setAttribute('enctype','multipart/form-data');
         $this->add(
-            array(
+            [
                 'name' => 'name',
-                'attributes' => array(
+                'attributes' => [
                     'type'  => 'text',
-                ),
-                'options' => array(
+                ],
+                'options' => [
                     'label' => 'Full Name',
-                ),
-            )
+                ],
+            ]
         );
         $this->add(
-            array(
+            [
                 'name' => 'email',
-                'attributes' => array(
+                'attributes' => [
                     'type'  => 'email',
-                ),
-                'options' => array(
+                    'required' => 'required'
+                ],
+                'options' => [
                     'label' => 'Email',
-                ),
-                'attributes' => array(
-                    'required' => 'required'
-                ),
-                'filters' => array(
-                    array('name' => 'StringTrim'),
-                ),
-                'validators' => array(
-                    array(
+                ],
+                'filters' => [
+                    ['name' => 'StringTrim'],
+                ],
+                'validators' => [
+                    [
                         'name' => 'EmailAddress',
-                        'options' => array(
-                            'messages' => array(
+                        'options' => [
+                            'messages' => [
                                 \Zend\Validator\EmailAddress::INVALID_FORMAT => 'Email address format is invalid'
-                            )
-                        )
-                    )
-                )
-            )
+                            ]
+                        ]
+                    ]
+                ]
+            ]
         );
         $this->add(
-            array(
+            [
                 'name' => 'password',
-                'attributes' => array(
+                'attributes' => [
                     'type'  => 'password',
-                ),
-                'options' => array(
+                    'required' => 'required'
+                ],
+                'options' => [
                     'label' => 'Password',
-                ),
-                'attributes' => array(
-                    'required' => 'required'
-                ),
-                'filters' => array(
-                    array('name' => 'StringTrim'),
-                ),
-            )
+                ],
+                'filters' => [
+                    ['name' => 'StringTrim'],
+                ],
+            ]
         );
         $this->add(
-            array(
+            [
                 'name' => 'confirm_password',
-                'attributes' => array(
-                    'type'  => 'confirm_password',
-                ),
-                'options' => array(
-                    'label' => 'Confirm password',
-                ),
-                'attributes' => array(
+                'attributes' => [
+                    'type'  => 'password',
                     'required' => 'required'
-                ),
-                'filters' => array(
-                    array('name' => 'StringTrim'),
-                ),
-            )
+                ],
+                'options' => [
+                    'label' => 'Confirm password',
+                ],
+                'filters' => [
+                    ['name' => 'StringTrim'],
+                ],
+            ]
         );
         $this->add(
-            array(
+            [
                 'name' => 'submit',
-                'attributes' => array(
+                'attributes' => [
                     'type' => 'submit',
                     'value' => 'Submit',
-                ),
-            )
+                ],
+            ]
         );
     }
 }
