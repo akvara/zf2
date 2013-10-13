@@ -20,46 +20,6 @@ return [
                     ],
                 ],
             ],
-            'album' => [
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => [
-                     'route'    => '/album',
-                     'defaults' => [
-                         'controller' => 'Album\Controller\Album',
-                         'action'     => 'index',
-                     ],
-                ],
-             ],
-            'contact' => [
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => [
-                    'route'    => '/contact',
-                    'defaults' => [
-                        'controller' => 'Contact\Controller\Contact',
-                        'action'     => 'index',
-                    ],
-                ],
-            ],
-            'sort' => [
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => [
-                    'route'    => '/sort',
-                    'defaults' => [
-                        'controller' => 'Sort\Controller\Sort',
-                        'action'     => 'sort',
-                    ],
-                ],
-            ],
-            'user' => [
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => [
-                    'route'    => '/user',
-                    'defaults' => [
-//                        'controller' => 'Contact\Controller\Contact',
-//                        'action'     => 'index',
-                    ],
-                ],
-            ],
             // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
@@ -104,8 +64,11 @@ return [
         ],
 
     ],
+
     'translator' => [
         'locale' => 'lt_LT',
+//        'locale' => 'en_EN',
+
         'translation_file_patterns' => [
             [
                 'type'     => 'gettext',
@@ -117,7 +80,6 @@ return [
     'controllers' => [
         'invokables' => [
             'Application\Controller\Index' => 'Application\Controller\IndexController',
-            'Album\Controller\Index' => 'Album\Controller\IndexController'
         ],
     ],
     'view_manager' => [

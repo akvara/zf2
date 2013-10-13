@@ -1,21 +1,20 @@
 ZF2 žaisliukas
 =============
 
-Turinys
+Specifika
 ---------
-Meniu konfigūruojamas
-Albums, Contact, Account, Sort, Comandline (pusiau veikiantis)
-Lietuvybė NEveikia
+Album neturi Pagination
+(Pagination pridedamas taip: http://framework.zend.com/manual/2.1/en/tutorials/tutorial.pagination.html)
 
 
-Mess Detector, CS fixer
-------
-vendor/bin/php-cs-fixer fix . -v
+Pasiekimai
+----------
 
+
+Kita
+----
+https://github.com/sebastianbergmann/phpunit/issues/690
 
 ToDo
 -------
-* į normalią formą
-* Count
-* į kvaraciejus.org /pi
 

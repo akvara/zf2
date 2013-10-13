@@ -1,88 +1,96 @@
 <?php
-return array(
-    'contact' => array(
-        'captcha' => array(
+return [
+    'contact' => [
+        'captcha' => [
             'class' => 'dumb',
-        ),
-        'form' => array(
+        ],
+        'form' => [
             'name' => 'contact',
-        ),
-        'mail_transport' => array(
+        ],
+        'mail_transport' => [
             'class' => 'Zend\Mail\Transport\Sendmail',
-            'options' => array(
-            )
-        ),
-        'message' => array(
+            'options' => [
+            ]
+        ],
+        'message' => [
             /*
-            'to' => array(
+            'to' => [
                 'EMAIL HERE' => 'NAME HERE',
-            ),
-            'sender' => array(
+            ],
+            'sender' => [
                 'address' => 'EMAIL HERE',
                 'name'    => 'NAME HERE',
-            ),
-            'from' => array(
+            ],
+            'from' => [
                 'EMAIL HERE' => 'NAME HERE',
-            ),
+            ],
              */
-        ),
-    ),
-    'controllers' => array(
-        'factories' => array(
+        ],
+    ],
+    'controllers' => [
+        'factories' => [
             'Contact\Controller\Contact' => 'Contact\Service\ContactControllerFactory',
-        ),
-    ),
-    'router' => array(
-        'routes' => array(
-            'contact' => array(
+        ],
+    ],
+    'router' => [
+        'routes' => [
+            'contact' => [
                 'type' => 'Literal',
-                'options' => array(
+                'options' => [
                     'route' => '/contact',
-                    'defaults' => array(
+                    'defaults' => [
                         '__NAMESPACE__' => 'Contact\Controller',
                         'controller'    => 'Contact',
                         'action'        => 'index',
-                    ),
-                ),
+                    ],
+                ],
                 'may_terminate' => true,
-                'child_routes' => array(
-                    'process' => array(
+                'child_routes' => [
+                    'process' => [
                         'type' => 'Literal',
-                        'options' => array(
+                        'options' => [
                             'route' => '/process',
-                            'defaults' => array(
+                            'defaults' => [
                                 'action' => 'process',
-                            ),
-                        ),
-                    ),
-                    'thank-you' => array(
+                            ],
+                        ],
+                    ],
+                    'thank-you' => [
                         'type' => 'Literal',
-                        'options' => array(
+                        'options' => [
                             'route' => '/thank-you',
-                            'defaults' => array(
+                            'defaults' => [
                                 'action' => 'thank-you',
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-        ),
-    ),
-    'service_manager' => array(
-        'factories' => array(
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
+    'service_manager' => [
+        'factories' => [
             'ContactCaptcha'       => 'Contact\Service\ContactCaptchaFactory',
             'ContactForm'          => 'Contact\Service\ContactFormFactory',
             'ContactMailMessage'   => 'Contact\Service\ContactMailMessageFactory',
             'ContactMailTransport' => 'Contact\Service\ContactMailTransportFactory',
-        ),
-    ),
-    'view_manager' => array(
-        'template_map' => array(
+        ],
+    ],
+    'view_manager' => [
+        'template_map' => [
             'contact/contact/index'     => __DIR__ . '/../view/contact/contact/index.phtml',
             'contact/contact/thank-you' => __DIR__ . '/../view/contact/contact/thank-you.phtml',
-        ),
-        'template_path_stack' => array(
+        ],
+        'template_path_stack' => [
             'contact' => __DIR__ . '/../view',
-        ),
-    ),
-);
+        ],
+    ],
+    'navigation' => [
+        'default' => [
+            'contact' => [
+                'label' => 'Contact',
+                'route' => 'contact',
+            ],
+        ],
+    ],
+];

@@ -10,6 +10,7 @@ return array(
 
 //        'Phone',
         'Sort',
+        'Users',
 //        'CommandLine',
 
         // Vendor modules
