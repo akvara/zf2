@@ -9,8 +9,6 @@
         "doctrine/migrations": "dev-master"
     },
     "require-dev": {
-        "phpunit/phpunit": "3.7.*",
-        "zendframework/zftool": "dev-master",
-        "zendframework/zend-developer-tools": "dev-master"
+        "phpunit/phpunit": "3.7.*"
     }
 }
