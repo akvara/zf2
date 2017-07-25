@@ -70,6 +70,12 @@ class SortableArea
     public $de_dupplicate;
 
     /**
+     * @Annotation\Type("Zend\Form\Element\Checkbox")
+     * @Annotation\Options({"label":"Add quotes", "default":"1"})
+     */
+    public $quotes;
+
+    /**
      * @Annotation\Type("Submit")
      * @Annotation\Attributes({"value":"Sort / Compare"})
      */

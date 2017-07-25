@@ -3,15 +3,16 @@
 $title = $this->translate('Sort');
 $this->headTitle($title);
 $form = $this->form;
-$form->setAttribute('action',
+$form->setAttribute(
+    'action',
     $this->url('sort',
-        array(  'action'     => 'index',
-                'controller' => 'Sort'
-    )
+        [
+            'action'     => 'index',
+            'controller' => 'Sort'
+        ]
 ));
 $form->prepare();
 
 echo $this->form()->openTag($form);
 echo $this->formCollection($form);
 echo $this->form()->closeTag();
-?>
